@@ -36,20 +36,22 @@
     },
     "autoload": {
         "psr-4": {
-            "Joinbiz\\": "src/Joinbiz/"
-          }
+            "Joinbiz\\": "src/Joinbiz"
+        }
     },
     "autoload-dev": {
         "psr-4": {
-            "Joinbiz\\": "src/Joinbiz/"
+            "Joinbiz\\": "src/Joinbiz"
         }
     },
-    "scripts": {
-        "post-autoload-dump": "@composer run prepare"
-    },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true
 }
+

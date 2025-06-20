@@ -1,0 +1,10 @@
+{
+    "name": "data-accounting",
+    "alias": "accounting",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+    ],
+    "files": []
+}

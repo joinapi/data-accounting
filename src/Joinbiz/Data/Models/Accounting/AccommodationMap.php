@@ -3,6 +3,7 @@
 namespace Joinbiz\Data\Models\Accounting;
 
 use Illuminate\Database\Eloquent\Model;
+use Joinbiz\Data\Models\Workeffort\WorkEffort;
 
 /**
  * @property string $accommodation_map_id
@@ -26,28 +27,28 @@ class AccommodationMap extends Model
 
     /**
      * The table associated with the model.
-     * 
+     *
      * @var string
      */
     protected $table = 'accommodation_map';
 
     /**
      * The primary key for the model.
-     * 
+     *
      * @var string
      */
     protected $primaryKey = 'accommodation_map_id';
 
     /**
      * The "type" of the auto-incrementing ID.
-     * 
+     *
      * @var string
      */
     protected $keyType = 'string';
 
     /**
      * Indicates if the IDs are auto-incrementing.
-     * 
+     *
      * @var bool
      */
     public $incrementing = false;

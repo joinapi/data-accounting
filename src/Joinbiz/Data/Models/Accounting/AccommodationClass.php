@@ -3,6 +3,7 @@
 namespace Joinbiz\Data\Models\Accounting;
 
 use Illuminate\Database\Eloquent\Model;
+use Joinbiz\Data\Models\Order\AccommodationSpot;
 
 /**
  * @property string $accommodation_class_id
@@ -23,28 +24,28 @@ class AccommodationClass extends Model
 
     /**
      * The table associated with the model.
-     * 
+     *
      * @var string
      */
     protected $table = 'accommodation_class';
 
     /**
      * The primary key for the model.
-     * 
+     *
      * @var string
      */
     protected $primaryKey = 'accommodation_class_id';
 
     /**
      * The "type" of the auto-incrementing ID.
-     * 
+     *
      * @var string
      */
     protected $keyType = 'string';
 
     /**
      * Indicates if the IDs are auto-incrementing.
-     * 
+     *
      * @var bool
      */
     public $incrementing = false;
