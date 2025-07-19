@@ -3,6 +3,7 @@
 namespace Joinbiz\Data\Models\Accounting;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\Pivot;
 
 /**
  * @property string $fixed_asset_type_id
@@ -24,14 +25,14 @@ use Illuminate\Database\Eloquent\Model;
  * @property Party $partyByOrganizationPartyId
  * @property GlAccount $glAccountByProfitGlAccountId
  */
-class FixedAssetTypeGlAccount extends Model
+class FixedAssetTypeGlAccount extends Pivot
 {
     const CREATED_AT = 'created_stamp';
     const UPDATED_AT = 'last_updated_stamp';
 
     /**
      * The table associated with the model.
-     * 
+     *
      * @var string
      */
     protected $table = 'fixed_asset_type_gl_account';

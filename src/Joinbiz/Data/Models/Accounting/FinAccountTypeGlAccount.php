@@ -3,6 +3,7 @@
 namespace Joinbiz\Data\Models\Accounting;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\Pivot;
 
 /**
  * @property string $fin_account_type_id
@@ -16,14 +17,14 @@ use Illuminate\Database\Eloquent\Model;
  * @property Party $partyByOrganizationPartyId
  * @property FinAccountType $finAccountType
  */
-class FinAccountTypeGlAccount extends Model
+class FinAccountTypeGlAccount extends Pivot
 {
     const CREATED_AT = 'created_stamp';
     const UPDATED_AT = 'last_updated_stamp';
 
     /**
      * The table associated with the model.
-     * 
+     *
      * @var string
      */
     protected $table = 'fin_account_type_gl_account';
