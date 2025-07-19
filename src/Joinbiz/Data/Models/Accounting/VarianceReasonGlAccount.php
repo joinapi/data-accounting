@@ -3,6 +3,7 @@
 namespace Joinbiz\Data\Models\Accounting;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\Pivot;
 
 /**
  * @property string $variance_reason_id
@@ -16,14 +17,14 @@ use Illuminate\Database\Eloquent\Model;
  * @property Party $partyByOrganizationPartyId
  * @property VarianceReason $varianceReason
  */
-class VarianceReasonGlAccount extends Model
+class VarianceReasonGlAccount extends Pivot
 {
     const CREATED_AT = 'created_stamp';
     const UPDATED_AT = 'last_updated_stamp';
 
     /**
      * The table associated with the model.
-     * 
+     *
      * @var string
      */
     protected $table = 'variance_reason_gl_account';

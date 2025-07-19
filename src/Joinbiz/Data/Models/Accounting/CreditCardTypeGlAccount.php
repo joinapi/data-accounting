@@ -3,6 +3,7 @@
 namespace Joinbiz\Data\Models\Accounting;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\Pivot;
 
 /**
  * @property string $card_type
@@ -13,14 +14,14 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $created_stamp
  * @property string $created_tx_stamp
  */
-class CreditCardTypeGlAccount extends Model
+class CreditCardTypeGlAccount extends Pivot
 {
     const CREATED_AT = 'created_stamp';
     const UPDATED_AT = 'last_updated_stamp';
 
     /**
      * The table associated with the model.
-     * 
+     *
      * @var string
      */
     protected $table = 'credit_card_type_gl_account';
